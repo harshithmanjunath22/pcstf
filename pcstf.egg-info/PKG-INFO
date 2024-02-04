@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: pcst-fast
-Version: 1.0.9
+Name: pcstf
+Version: 1.0.10.dev0+g6a553d0.d20240204
 Summary: A fast implementation of the Goemans-Williamson scheme for the prize-collecting Steiner tree / forest problem.
 Home-page: https://github.com/fraenkel-lab/pcst_fast
 Author: Harshith Manjunath
