@@ -11,9 +11,9 @@ def test_simple1():
   prizes = [1.0, 1.0, 1.0, 1.0]
   costs = [0.8, 1.8, 2.8]
   result_nodes, result_edges = pcst_fast.pcst_fast(edges, prizes, costs, -1, 1, 'strong', 0)
-  print(result_nodes)
-  print("--------")
-  print(result_edges)
+  #print(result_nodes)
+  #print("--------")
+  #print(result_edges)
   
   npt.assert_array_equal(result_nodes, [0, 1])
   npt.assert_array_equal(result_edges, [0])
