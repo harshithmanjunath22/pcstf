@@ -88,11 +88,11 @@ with open("README.md", encoding="utf-8") as f:
     README = f.read()
 
 setup(
-    name='pcst_fast',
-    packages=['pcst_fast'],
-    package_dir={'pcst_fast': 'src'},
+    name='pcstf',
+    packages=['pcstf'],
+    package_dir={'pcstf': 'src'},
     use_scm_version=True,
-    url='https://github.com/fraenkel-lab/pcst_fast',
+    url='https://github.com/harshithmanjunath22/pcstf',
     license='GNU General Public License',
     author='Harshith',
     author_email='harshith.manjunath@fau.de',
