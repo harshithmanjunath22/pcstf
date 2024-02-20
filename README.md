@@ -1,42 +1,24 @@
-[![Build Status](https://api.travis-ci.org/fraenkel-lab/pcst_fast.svg)](https://travis-ci.org/fraenkel-lab/pcst_fast)
-
-pcst_fast
+pcstf
 =========
 
 A library for solving the **prize-collecting Steiner forest (PCSF)** problem on graphs.
 The underlying algorithm is based on the classical Goemans-Williamson approximation scheme.
 Our variant provably runs in nearly-linear time and has a factor-2 approximation guarantee.
-The following paper contains details about the algorithm:
 
-> [A Nearly-Linear Time Framework for Graph-Structured Sparsity](http://people.csail.mit.edu/ludwigs/papers/icml15_graphsparsity.pdf)
-> Chinmay Hegde, Piotr Indyk, Ludwig Schmidt
-> ICML 2015
 
 Installation
 ------------
 
-- **Option 1: pip**
+1: pip
 
-		pip install pcst_fast
+		pip install pcstf
 
-	This may not work for some versions of python on some operating systems.
-
-- **Option 2: manual**
-
-	The core C++ library has no dependencies besides a basic build system for C++11.
-	Both g++ and clang are currently supported.
-	The Python wrapper requires a functioning Python build system.
-
-	Clone the repository and compile the python wrapper with the supplied makefile:
-
-	    make pcst_fast_py
-
-	You can then import the package via `import pcst_fast`.
+	You can import the package via `import pcstf`.
 
 Usage
 -----
 
-The `pcst_fast` package contains the following function:
+The `pcstf` package contains the following function:
 
     vertices, edges = pcst_fast(edges, prizes, costs, root, num_clusters, pruning, verbosity_level)
 
@@ -52,16 +34,4 @@ The parameters are:
 The output variables are:
 * `vertices`: the vertices in the solution as a 1D int64 array.
 * `edges`: the edges in the output as a 1D int64 array. The list contains indices into the list of edges passed into the function.
-
-Performance
------------
-
-The following paper contains many results on standard PCST benchmark instances:
-
-> [A Fast, Adaptive Variant of the Goemans-Williamson Scheme for the Prize-Collecting Steiner Tree Problem](http://people.csail.mit.edu/ludwigs/papers/dimacs14_fastpcst.pdf)
-> Chinmay Hegde, Piotr Indyk, Ludwig Schmidt
-> Workshop of the 11th DIMACS Implementation Challenge: Steiner Tree Problems, 2014
-
-On instances with up to 350,000 edges, the algorithm typically runs in under 2 seconds on a standard laptop computer from 2010.
-
-# PCST
+# pcstf
