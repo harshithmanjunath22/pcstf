@@ -83,16 +83,20 @@ class BuildExt(build_ext):
         build_ext.build_extensions(self)
 
 
+
 # Read the contents of the README file
 with open("README.md", encoding="utf-8") as f:
     README = f.read()
 
 setup(
     name='pcstf',
-    packages=['pcstf'],
-    package_dir={'pcstf': 'src'},
-    use_scm_version=True,
-    url='https://github.com/harshithmanjunath22/pcstf',
+    packages=['pcst_fast'],
+    package_dir={'pcst_fast': 'src'},
+    use_scm_version={
+        'version_scheme': 'python-simplified-semver',
+        'local_scheme': lambda version: '',
+    },
+    url='https://github.com/harshithmanjunath22/pcstf.git',
     license='GNU General Public License',
     author='Harshith',
     author_email='harshith.manjunath@fau.de',
