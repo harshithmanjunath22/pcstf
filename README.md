@@ -13,7 +13,7 @@ Installation
 
 		pip install pcstf
 
-	You can import the package via `import pcstf`.
+	You can import the package via `import pcst_fast`.
 
 Usage
 -----
