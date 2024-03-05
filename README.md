@@ -34,4 +34,43 @@ The parameters are:
 The output variables are:
 * `vertices`: the vertices in the solution as a 1D int64 array.
 * `edges`: the edges in the output as a 1D int64 array. The list contains indices into the list of edges passed into the function.
+
+Test Cases:
+
+Test Case-1:
+edges = [[0, 1], [1, 2], [2, 3]]
+prizes = [1.0, 1.0, 1.0, 1.0]
+costs = [0.8, 1.8, 2.8]
+result_nodes, result_edges = pcst_fast.pcst_fast(edges, prizes, costs, -1, 1, 'strong', 0)
+
+Test Case-2:
+edges = [[0, 1], [1, 2], [2, 3], [2,3], [3,1], [0,2]]
+prizes = [1.0, 0.5, 1.0, 0.5, 1.0, 0.5]
+costs = [0.8, 1.8, 2.8, 2.8, 1.8, 0.8]
+result_nodes, result_edges = pcst_fast.pcst_fast(edges, prizes, costs, -1, 1, 'strong', 0)
+
+Test Case-3:
+ edges = [[0, 1], [1, 2], [2, 3], [2,3], [3,1], [0,2]]
+prizes = [0.5, 0.5, 0.5, 0.5, 1.0, 0.5]
+costs = [0.8, 1.8, 2.8, 2.8, 1.8, 0.8]
+result_nodes, result_edges = pcst_fast.pcst_fast(edges, prizes, costs, -1, 1, 'strong', 0)
+
+Test Case-4:
+edges = [[0, 1], [1, 2], [2, 3], [2,3], [3,1], [0,2]]
+prizes = [0.5, 0.5, 0.5, 0.5, 1.0, 0.5]
+costs = [0.8, 0.8, 0.8, 0.8, 0.8, 0.8]
+result_nodes, result_edges = pcst_fast.pcst_fast(edges, prizes, costs, -1, 1, 'strong', 0)
+
+Test Case-5:
+edges = [[0, 1], [1, 2], [2, 3], [2,3], [3,1], [0,2]]
+prizes = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+costs = [0.8, 0.8, 0.8, 0.8, 0.8, 0.8]
+result_nodes, result_edges = pcst_fast.pcst_fast(edges, prizes, costs, -1, 1, 'strong', 0)
+
+Test Case-6:
+edges = [[0, 1], [1, 2], [2, 3], [1,3], [0,2]]
+prizes = [1.0, 1.0, 1.0, 1.0, 1.0]
+costs = [0.8, 0.8, 0.8, 0.8, 0.8]
+result_nodes, result_edges = pcst_fast.pcst_fast(edges, prizes, costs, -1, 1, 'strong', 0)
+
 # pcstf
