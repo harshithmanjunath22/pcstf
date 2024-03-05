@@ -35,7 +35,9 @@ The output variables are:
 * `vertices`: the vertices in the solution as a 1D int64 array.
 * `edges`: the edges in the output as a 1D int64 array. The list contains indices into the list of edges passed into the function.
 
-* Test Cases:
+
+Test Cases:
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 Test Case-1:
 	edges = [[0, 1], [1, 2], [2, 3]]
